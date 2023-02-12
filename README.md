@@ -1,8 +1,7 @@
 # CashewMan430.github.io
 
 
-'''py
+```py
 import segno
 video = segno.make('http://bit.ly/3Ym4H8Y', micro=False)
-video.save('TestQRCode.png', scale=10)
-'''
+video.save('TestQRCode.png', scale=10)```
