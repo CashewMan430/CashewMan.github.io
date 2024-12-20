@@ -1,0 +1,22 @@
+{
+  "name": "cashewman430.github.io-main",
+  "version": "1.0.0",
+  "description": "Anniversary website",
+  "main": "backend.js",
+  "scripts": {
+    "test": "\"echo \\\"Error: no test specified\\\" && exit 1\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CashewMan430/CashewMan430.github.io.git"
+  },
+  "author": "CashewMan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CashewMan430/CashewMan430.github.io/issues"
+  },
+  "homepage": "https://github.com/CashewMan430/CashewMan430.github.io#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
