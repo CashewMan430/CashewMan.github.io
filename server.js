@@ -19,10 +19,10 @@ app.post('/send-email', (req, res) => {
 
     // Configure the email options
     const mailOptions = {
-        from: 'anishka.loves.aakaash@gmail.com', // Sender's email address
-        to: 'aak.jamad@gmail.com',                          // Recipient's email address
-        subject: 'I love you',                     // Email subject
-        text: 'Hi baby, Anishka here. I just wanted to say I love you. Mmmmmmmmmmmwaa.',                        // Email content
+        from: 'anishka.loves.aakaash@gmail.com',
+        to: 'aak.jamad@gmail.com',
+        subject: 'I love you',
+        text: 'Hi baby, Anishka here. I just wanted to say I love you. Mmmmmmmmmmmwaa.',
     };
 
     // Send the email
