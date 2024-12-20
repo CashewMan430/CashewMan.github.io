@@ -8,17 +8,21 @@ var transporter = nodemailer.createTransport({
   }
 });
 
-var mailOptions = {
-  from: 'anishka.loves.aakaash@gmail.com',
-  to: 'aak.jamad@gmail.com',
-  subject: 'I love you',
-  text: 'Hi baby, Anishka here. I just wanted to say I love you. Mmmmmmmmmmmwaa.'
-};
+app.post('/send-email', (req, res) => {
+  const { to, subject, text } = req.body;
 
-transporter.sendMail(mailOptions, function(error, info){
-  if (error) {
-    console.log(error);
-  } else {
-    console.log('Email sent: ' + info.response);
-  }
-});
+  const mailOptions = {
+      from: 'anishka.loves.aakaash@gmail.com',
+      to: 'aak.jamad@gmail.com',
+      subject: 'I love you',
+      text: 'Hi baby, Anishka here. I just wanted to say I love you. Mmmmmmmmmmmwaa.'
+  };
+
+  transporter.sendMail(mailOptions, function(error, info){
+    if (error) {
+      console.log(error);
+    } else {
+      console.log('Email sent: ' + info.response);
+    }
+  });
+})
