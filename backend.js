@@ -10,6 +10,11 @@ var transporter = nodemailer.createTransport({
   }
 });
 
+const PORT = process.env.PORT || 2009;
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+});
+
 app.post('/send-email', (req, res) => {
   const { to, subject, text } = req.body;
 
