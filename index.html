@@ -108,38 +108,12 @@
     </div>
 
     <!-- Email Button Section -->
-    <div class="email-button">
-        <button onclick="sendEmail()">Send a love email hehe</button>
-    </div>
+    <h1>Send an Email</h1>
+    <button id="sendEmailButton">Send Email</button>
 
     <script>
-        // Dynamic timeline content
-        const timelineList = document.getElementById('timeline-list');
-        const events = [
-            { time: '7-29-2024', event: 'We met at NSO' },
-            { time: '8-20-2024', event: 'We talked on Snapchat for the first time' },
-            { time: '9-6-2024', event: 'We texted for the first time' },
-            { time: '9-10-2024', event: 'We fell asleep on call for the first time' },
-            { time: '9-11-2024', event: 'I started planning to ask you out' },
-            { time: '9-12-2024', event: 'We admitted we like each other' },
-            { time: '9-13-2024', event: 'We FaceTimed for the first time' },
-            { time: '9-17-2024', event: 'We hugged for the first time' },
-            { time: '9-19-2024', event: 'We went back and forth with "I like you more" for the first time' },
-            { time: '9-20-2024', event: 'We ate together for the first time' },
-            { time: '9-20-2024', event: 'We started dating' },
-            { time: '9-22-2024', event: 'We talked about kissing for the first time and I almost said "I love you"' },
-            { time: '10-5-2024', event: 'We went to Garba together'},
-            { time: '10-16-2024', event: 'We kissed for the firt time'},
-            { time: '11-24-2024', event: 'We went on our first date'},
-        ];
-
-        events.forEach(item => {
-            const li = document.createElement('li');
-            li.textContent = `${item.time} - ${item.event}`;
-            timelineList.appendChild(li);
-        });
-
-        document.getElementById('email-button').addEventListener('click', async () => {
+        // Add an event listener to the button
+        document.getElementById('sendEmailButton').addEventListener('click', async () => {
             const emailData = {
                 to: 'aak.jamad@gmail.com',
                 subject: 'I love you',
@@ -165,6 +139,60 @@
                 alert('An error occurred while sending the email.');
             }
         });
-    </script>
+
+    // <script>
+    //     // Dynamic timeline content
+    //     const timelineList = document.getElementById('timeline-list');
+    //     const events = [
+    //         { time: '7-29-2024', event: 'We met at NSO' },
+    //         { time: '8-20-2024', event: 'We talked on Snapchat for the first time' },
+    //         { time: '9-6-2024', event: 'We texted for the first time' },
+    //         { time: '9-10-2024', event: 'We fell asleep on call for the first time' },
+    //         { time: '9-11-2024', event: 'I started planning to ask you out' },
+    //         { time: '9-12-2024', event: 'We admitted we like each other' },
+    //         { time: '9-13-2024', event: 'We FaceTimed for the first time' },
+    //         { time: '9-17-2024', event: 'We hugged for the first time' },
+    //         { time: '9-19-2024', event: 'We went back and forth with "I like you more" for the first time' },
+    //         { time: '9-20-2024', event: 'We ate together for the first time' },
+    //         { time: '9-20-2024', event: 'We started dating' },
+    //         { time: '9-22-2024', event: 'We talked about kissing for the first time and I almost said "I love you"' },
+    //         { time: '10-5-2024', event: 'We went to Garba together'},
+    //         { time: '10-16-2024', event: 'We kissed for the firt time'},
+    //         { time: '11-24-2024', event: 'We went on our first date'},
+    //     ];
+
+    //     events.forEach(item => {
+    //         const li = document.createElement('li');
+    //         li.textContent = `${item.time} - ${item.event}`;
+    //         timelineList.appendChild(li);
+    //     });
+
+    //     document.getElementById('email-button').addEventListener('click', async () => {
+    //         const emailData = {
+    //             to: 'aak.jamad@gmail.com',
+    //             subject: 'I love you',
+    //             text: 'Hi baby, Anishka here. I just wanted to say I love you. Mmmmmmmmmmmwaa.',
+    //         };
+
+    //         try {
+    //             const response = await fetch('https://love-email-sending.onrender.com/send-email', {
+    //                 method: 'POST',
+    //                 headers: {
+    //                     'Content-Type': 'application/json',
+    //                 },
+    //                 body: JSON.stringify(emailData),
+    //             });
+
+    //             if (response.ok) {
+    //                 alert('Email sent successfully!');
+    //             } else {
+    //                 alert('Failed to send email. Please try again.');
+    //             }
+    //         } catch (error) {
+    //             console.error('Error:', error);
+    //             alert('An error occurred while sending the email.');
+    //         }
+    //     });
+    // </script>
 </body>
 </html>
